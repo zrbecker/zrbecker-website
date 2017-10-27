@@ -4,17 +4,30 @@ body {
 	font: 16px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 2rem; }
-h4 { font-size: 1.75rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; font-weight: bold; }
+header {
+	h1 { font-size: 3rem; }
+	h2 { font-size: 2.5rem; }
+	h3 { font-size: 2rem; }
+	h4 { font-size: 1.75rem; }
+	h5 { font-size: 1.25rem; }
+	h6 { font-size: 1rem; font-weight: bold; }
+}
+
+.post-view {
+	h1 { font-size: 2rem; }
+	h2 { font-size: 1.75rem; }
+	h3 { font-size: 1.5rem; }
+	h4 { font-size: 1.25rem; }
+	h5 { font-size: 1rem; font-weight: bold; }
+	h6 { font-size: 1rem; font-style: italic; }
+}
 
 a {
 	text-decoration: none;
 	color: #4d7382;
 }
+
+p { margin-top: 0.3rem; }
 
 .container {
 	padding: 15px;

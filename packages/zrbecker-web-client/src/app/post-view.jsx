@@ -1,22 +1,14 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
 
 export default class PostView extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      posted: new Date(),
-    }
-  }
-
   render() {
+    let {title, date, content} = this.props.post
     return (
       <div className="post-view">
-        <h3>Post Title</h3>
-        <p>Posted: {this.state.posted.toDateString()}</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
-          maiores libero inventore ratione dolor rerum omnis magnam eligendi
-          unde eos iste facere, vitae nisi voluptate. Facilis ipsum earum
-          quisquam sint!</p>
+        <h1>{title}</h1>
+        <p>Posted: {date.toDateString()}</p>
+        <ReactMarkdown source={content} />
       </div>
     )
   }
