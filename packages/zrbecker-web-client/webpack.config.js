@@ -27,7 +27,19 @@ module.exports = {
           options: {presets: ['env']}
         },
       },
+      {
+        test: /\.scss/,
+        exclude: /node_modules/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'sass-loader'},
+        ]
+      }
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -39,4 +51,5 @@ module.exports = {
     compress: true,
     port: 4000
   },
+  devtool: 'source-map'
 }
