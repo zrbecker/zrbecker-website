@@ -13,7 +13,16 @@
     "postinstall": "npm run compile"
   },
   "babel": {
-    "presets": [["env", {"targets": {"node": "current"}}]]
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -32,6 +41,8 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
+    "express-force-domain": "0.0.6",
+    "express-sslify": "^1.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-markdown": "^2.5.0"
