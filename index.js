@@ -11,7 +11,7 @@ if (process.env.FORCE_DOMAIN) {
   app.use(forceDomain(process.env.FORCE_DOMAIN))
 }
 if (process.env.FORCE_HTTPS) {
-  app.use(sslify.HTTPS({ trustProtoHeader: true }))
+  app.use(sslify.HTTPS({trustProtoHeader: true}))
 }
 app.use(express.static(path.join(__dirname, 'public')))
 
