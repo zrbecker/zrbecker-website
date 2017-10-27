@@ -29,6 +29,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
@@ -39,4 +42,5 @@ module.exports = {
     compress: true,
     port: 4000
   },
+  devtool: 'source-map'
 }
