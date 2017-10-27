@@ -3,10 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', 'whatwg-fetch', './src/app/app.jsx'],
+    app: ['babel-polyfill', 'whatwg-fetch', './client-src/app/app.jsx'],
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/public'),
     filename: 'js/[name].bundle.js',
   },
   module: {
@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './client-src/index.html'
     }),
   ],
   devServer: {
