@@ -79,7 +79,10 @@ export default class BlogView extends React.Component {
     const postViews = []
     for (const post of this.state.posts) {
       postViews.push(
-        <PostView key={post.id} post={post} />
+        <div key={post.id}>
+          <hr />
+          <PostView key={post.id} post={post} />
+        </div>
       )
     }
     return postViews
@@ -89,6 +92,7 @@ export default class BlogView extends React.Component {
     return (
       <div className="blog-view">
         <HeaderView title="Zachary Becker" />
+        <hr />
         <TableOfContentsView />
         {this._renderPosts()}
       </div>
