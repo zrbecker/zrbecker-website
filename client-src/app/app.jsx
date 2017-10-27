@@ -1,4 +1,4 @@
-import BlogView from './blog-view'
+import BlogView from './blog/blog-view'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './styles/style.scss'
