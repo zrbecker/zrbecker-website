@@ -1,0 +1,40 @@
+@import 'reset';
+
+body {
+	font: 16px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.75rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; font-weight: bold; }
+
+a {
+	text-decoration: none;
+	color: #4d7382;
+}
+
+.container {
+	padding: 15px;
+}
+
+.blog-view {
+	@extend .container;
+
+	margin: 0 auto;
+	max-width: 1170px;
+}
+
+.header-view {
+	@extend .container;
+}
+
+.post-view {
+	@extend .container;
+}
+
+.table-of-contents-view {
+	@extend .container;
+}

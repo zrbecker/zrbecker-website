@@ -7,7 +7,7 @@ export default class BlogView extends React.Component {
   render() {
     return (
       <div className="blog-view">
-        <HeaderView title="Zachary Becker Blog" />
+        <HeaderView title="Zachary Becker" />
         <TableOfContentsView />
         <PostView />
         <PostView />
