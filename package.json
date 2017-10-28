@@ -7,12 +7,9 @@
   "scripts": {
     "start": "node .",
     "compile-client": "webpack",
-    "compile-server": "babel index.js --out-file dist/index.js",
-    "compile": "npm run compile-client && npm run compile-server",
-    "watch": "npm run compile-client -- --watch & npm run compile-server -- --watch",
-    "start-dev": "nodemon .",
-    "start-webpack-dev": "webpack-dev-server",
-    "postinstall": "npm run compile"
+    "compile-server": "babel server-src -d dist -s",
+    "start-dev": "nodemon . -w dist -i dist/public",
+    "postinstall": "npm run compile-client && npm run compile-server"
   },
   "babel": {
     "presets": [
