@@ -41,6 +41,8 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "express-force-domain": "0.0.6",
     "express-sslify": "^1.2.0",
