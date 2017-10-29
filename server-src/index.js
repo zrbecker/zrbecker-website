@@ -4,6 +4,7 @@ import express from 'express'
 import featureFlags from './lib/feature-flags'
 import httpsSecurity from './lib/https-security'
 import path from 'path'
+import {loginRouter} from './lib/auth-middleware'
 import {posts} from './lib/post-router'
 import process from 'process'
 
@@ -19,9 +20,15 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
 app.use(cookieParser())
 
+const connectionStr = process.env.MONGODB_CONNECTION_STR ||
+  'mongodb://localhost/blog'
+
 if (featureFlags.blogApi) {
-  const connectionStr = process.env.MONGODB_CONNECTION_STR || null
   app.use('/api/blog', posts(connectionStr))
+}
+
+if (featureFlags.authApi) {
+  app.use('/api/auth', loginRouter(connectionStr))
 }
 
 app.listen(app.get('port'), () => {
