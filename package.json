@@ -7,12 +7,9 @@
   "scripts": {
     "start": "node .",
     "compile-client": "webpack",
-    "compile-server": "babel index.js --out-file dist/index.js",
-    "compile": "npm run compile-client && npm run compile-server",
-    "watch": "npm run compile-client -- --watch & npm run compile-server -- --watch",
-    "start-dev": "nodemon .",
-    "start-webpack-dev": "webpack-dev-server",
-    "postinstall": "npm run compile"
+    "compile-server": "babel server-src -d dist -s",
+    "start-dev": "nodemon . -w dist -i dist/public",
+    "postinstall": "npm run compile-client && npm run compile-server"
   },
   "babel": {
     "presets": [
@@ -44,9 +41,12 @@
     "whatwg-fetch": "^2.0.3"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "express-force-domain": "0.0.6",
     "express-sslify": "^1.2.0",
+    "mongodb": "^2.2.33",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-markdown": "^2.5.0"
