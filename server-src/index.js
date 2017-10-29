@@ -20,7 +20,8 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 
 if (featureFlags.blogApi) {
-  app.use('/api/blog', posts())
+  const connectionStr = process.env.MONGODB_CONNECTION_STR || null
+  app.use('/api/blog', posts(connectionStr))
 }
 
 app.listen(app.get('port'), () => {
