@@ -45,11 +45,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './client/index.html'
     }),
-  ],
-  devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
-    compress: true,
-    port: 4000
-  },
-  devtool: 'source-map'
+  ]
 }
