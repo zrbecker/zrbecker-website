@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "A reactjs front end for website.",
   "repository": "zrbecker/zrbecker-website",
-  "main": "dist/index.js",
+  "main": "dist/server/index.js",
   "scripts": {
     "start": "node .",
     "compile-client": "webpack",
-    "compile-server": "babel server-src -d dist -s",
+    "compile-server": "babel server -d dist/server",
     "start-dev": "nodemon . -w dist -i dist/public",
     "postinstall": "npm run compile-client && npm run compile-server",
     "test": "mocha tests"

@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', 'whatwg-fetch', './client-src/app/app.jsx'],
+    app: ['babel-polyfill', 'whatwg-fetch', './client/app/app.jsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist/public'),
@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './client-src/index.html'
+      template: './client/index.html'
     }),
   ],
   devServer: {
