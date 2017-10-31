@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "A reactjs front end for website.",
   "repository": "zrbecker/zrbecker-website",
-  "main": "dist/server/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node .",
+    "start-dev": "nodemon . -w server",
     "compile-client": "webpack",
     "compile-server": "babel server -d dist/server",
     "start-dev": "nodemon . -w dist -i dist/public",

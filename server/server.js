@@ -15,7 +15,10 @@ app.set('port', process.env.PORT || 8080)
 
 app.use(httpsSecurity.secure(
   app.get('domain'), app.get('https'), {trustProtoHeader: true}))
-app.use(express.static(path.join(__dirname, '../public')))
+
+const PUBLIC_DIR = process.env.NODE_ENV === 'development'
+  ? '../dist/public' : '../public'
+app.use(express.static(path.join(__dirname, PUBLIC_DIR)))
 app.use(bodyParser.json())
 app.use(cookieParser())
 
