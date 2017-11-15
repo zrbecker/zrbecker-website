@@ -20,7 +20,7 @@ const HomeView = () => {
       <section>
         <p>
           <span style={{padding: '0 0.5em'}}>
-            <FontAwesome name='envelope' />
+            <FontAwesome name='envelope' />{' '}
             <a href='mailto:zrbecker@gmail.com'>Email</a>
           </span>
           <span style={{padding: '0 0.5em'}}>
