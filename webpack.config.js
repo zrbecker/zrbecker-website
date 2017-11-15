@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', 'whatwg-fetch', './client-src/app/app.jsx'],
+    app: [
+      'babel-polyfill',
+      'whatwg-fetch',
+      './client-src/app/app.jsx',
+    ],
   },
   output: {
     path: path.resolve(__dirname, 'dist/public'),
@@ -34,6 +38,13 @@ module.exports = {
           {loader: 'style-loader'},
           {loader: 'css-loader'},
           {loader: 'sass-loader'},
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       }
     ],
