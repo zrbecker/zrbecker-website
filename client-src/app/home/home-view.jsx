@@ -25,11 +25,11 @@ const HomeView = () => {
           </span>
           <span style={{padding: '0 0.5em'}}>
             <FontAwesome name='linkedin' />{' '}
-            <a href='#'>LinkedIn</a>
+            <a href='https://www.linkedin.com/in/zrbecker/'>LinkedIn</a>
           </span>
           <span style={{padding: '0 0.5em'}}>
             <FontAwesome name='github' />{' '}
-            <a href='#'>Github</a>
+            <a href='https://github.com/zrbecker'>Github</a>
           </span>
         </p>
       </section>
